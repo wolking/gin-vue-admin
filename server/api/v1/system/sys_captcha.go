@@ -33,10 +33,15 @@ func (b *BaseApi) Captcha(c *gin.Context) {
 		global.GVA_LOG.Error("验证码获取失败!", zap.Error(err))
 		response.FailWithMessage("验证码获取失败", c)
 	} else {
+		var captchaStr string
+		if global.GVA_CONFIG.Captcha.IsReturnCaptcha {
+			captchaStr = store.Get(id, false)
+		}
 		response.OkWithDetailed(systemRes.SysCaptchaResponse{
 			CaptchaId:     id,
 			PicPath:       b64s,
 			CaptchaLength: global.GVA_CONFIG.Captcha.KeyLong,
+			Captcha:       captchaStr,
 		}, "验证码获取成功", c)
 	}
 }

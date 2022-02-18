@@ -133,6 +133,7 @@ func (b *BaseApi) Register(c *gin.Context) {
 // @Summary 用户修改密码
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Param data body systemReq.ChangePasswordStruct true "用户名, 原密码, 新密码"
 // @Success 200 {object} response.Response{msg=string} "用户修改密码"
 // @Router /user/changePassword [post]
@@ -157,6 +158,7 @@ func (b *BaseApi) ChangePassword(c *gin.Context) {
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
+// @Param x-token header string false "token"
 // @Param data body request.PageInfo true "页码, 每页大小"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "分页获取用户列表,返回包括列表,总数,页码,每页数量"
 // @Router /user/getUserList [post]
@@ -185,6 +187,7 @@ func (b *BaseApi) GetUserList(c *gin.Context) {
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
+// @Param x-token header string false "token"
 // @Param data body systemReq.SetUserAuth true "用户UUID, 角色ID"
 // @Success 200 {object} response.Response{msg=string} "设置用户权限"
 // @Router /user/setUserAuthority [post]
@@ -221,6 +224,7 @@ func (b *BaseApi) SetUserAuthority(c *gin.Context) {
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
+// @Param x-token header string false "token"
 // @Param data body systemReq.SetUserAuthorities true "用户UUID, 角色ID"
 // @Success 200 {object} response.Response{msg=string} "设置用户权限"
 // @Router /user/setUserAuthorities [post]
@@ -240,6 +244,7 @@ func (b *BaseApi) SetUserAuthorities(c *gin.Context) {
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
+// @Param x-token header string false "token"
 // @Param data body request.GetById true "用户ID"
 // @Success 200 {object} response.Response{msg=string} "删除用户"
 // @Router /user/deleteUser [delete]
@@ -268,6 +273,7 @@ func (b *BaseApi) DeleteUser(c *gin.Context) {
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
+// @Param x-token header string false "token"
 // @Param data body system.SysUser true "ID, 用户名, 昵称, 头像链接"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "设置用户信息"
 // @Router /user/setUserInfo [put]
@@ -291,6 +297,7 @@ func (b *BaseApi) SetUserInfo(c *gin.Context) {
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
+// @Param x-token header string false "token"
 // @Param data body system.SysUser true "ID, 用户名, 昵称, 头像链接"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "设置用户信息"
 // @Router /user/SetSelfInfo [put]
@@ -311,6 +318,7 @@ func (b *BaseApi) SetSelfInfo(c *gin.Context) {
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
+// @Param x-token header string false "token"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "获取用户信息"
 // @Router /user/getUserInfo [get]
 func (b *BaseApi) GetUserInfo(c *gin.Context) {
@@ -327,6 +335,7 @@ func (b *BaseApi) GetUserInfo(c *gin.Context) {
 // @Summary 用户修改密码
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Param data body system.SysUser true "ID"
 // @Success 200 {object} response.Response{msg=string} "用户修改密码"
 // @Router /user/resetPassword [post]

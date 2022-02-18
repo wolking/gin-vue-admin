@@ -35,6 +35,12 @@ const docTemplate_swagger = `{
                 "summary": "创建基础api",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "api路径, api中文描述, api组, 方法",
                         "name": "data",
                         "in": "body",
@@ -84,6 +90,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "删除api",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "ID",
                         "name": "data",
@@ -135,6 +147,12 @@ const docTemplate_swagger = `{
                 "summary": "删除选中Api",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "ID",
                         "name": "data",
                         "in": "body",
@@ -183,6 +201,14 @@ const docTemplate_swagger = `{
                     "SysApi"
                 ],
                 "summary": "获取所有的Api 不分页",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "获取所有的Api 不分页,返回包括api列表",
@@ -226,6 +252,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "根据id获取api",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "根据id获取api",
                         "name": "data",
@@ -276,6 +308,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "分页获取API列表",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "分页获取API列表",
                         "name": "data",
@@ -330,6 +368,12 @@ const docTemplate_swagger = `{
                 "summary": "修改基础api",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "api路径, api中文描述, api组, 方法",
                         "name": "data",
                         "in": "body",
@@ -379,6 +423,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "拷贝角色",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "旧角色id, 新权限id, 新权限名, 新父角色id",
                         "name": "data",
@@ -433,6 +483,12 @@ const docTemplate_swagger = `{
                 "summary": "创建角色",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "权限id, 权限名, 父角色id",
                         "name": "data",
                         "in": "body",
@@ -486,6 +542,12 @@ const docTemplate_swagger = `{
                 "summary": "删除角色",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "删除角色",
                         "name": "data",
                         "in": "body",
@@ -535,6 +597,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "分页获取角色列表",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "页码, 每页大小",
                         "name": "data",
@@ -589,6 +657,12 @@ const docTemplate_swagger = `{
                 "summary": "设置角色资源权限",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "设置角色资源权限",
                         "name": "data",
                         "in": "body",
@@ -638,6 +712,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "更新角色信息",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "权限id, 权限名, 父角色id",
                         "name": "data",
@@ -692,6 +772,12 @@ const docTemplate_swagger = `{
                 "summary": "自动代码模板",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "创建自动代码",
                         "name": "data",
                         "in": "body",
@@ -729,6 +815,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "删除回滚记录",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "请求参数",
                         "name": "data",
@@ -778,6 +870,14 @@ const docTemplate_swagger = `{
                     "AutoCode"
                 ],
                 "summary": "获取当前表所有字段",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "获取当前表所有字段",
@@ -821,6 +921,14 @@ const docTemplate_swagger = `{
                     "AutoCode"
                 ],
                 "summary": "获取当前所有数据库",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "获取当前所有数据库",
@@ -865,6 +973,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "获取meta信息",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "请求参数",
                         "name": "data",
@@ -920,6 +1034,12 @@ const docTemplate_swagger = `{
                 "summary": "查询回滚记录",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "请求参数",
                         "name": "data",
                         "in": "body",
@@ -971,6 +1091,14 @@ const docTemplate_swagger = `{
                     "AutoCode"
                 ],
                 "summary": "获取当前数据库所有表",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "获取当前数据库所有表",
@@ -1015,6 +1143,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "预览创建后的代码",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "预览创建代码",
                         "name": "data",
@@ -1069,6 +1203,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "回滚自动生成代码",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "请求参数",
                         "name": "data",
@@ -1506,6 +1646,12 @@ const docTemplate_swagger = `{
                 "summary": "更新角色api权限",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "权限id, 权限模型列表",
                         "name": "data",
                         "in": "body",
@@ -1555,6 +1701,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "获取权限列表",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "权限id, 权限模型列表",
                         "name": "data",
@@ -2425,14 +2577,17 @@ const docTemplate_swagger = `{
         },
         "/init/initdb": {
             "post": {
-                "produces": [
-                    "application/json"
-                ],
                 "tags": [
                     "InitDB"
                 ],
                 "summary": "初始化用户数据库",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "初始化数据库参数",
                         "name": "data",
@@ -2482,6 +2637,14 @@ const docTemplate_swagger = `{
                     "Jwt"
                 ],
                 "summary": "jwt加入黑名单",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "jwt加入黑名单",
@@ -2522,6 +2685,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "新增菜单",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "路由path, 父菜单ID, 路由name, 对应前端文件路径, 排序标记",
                         "name": "data",
@@ -2573,6 +2742,12 @@ const docTemplate_swagger = `{
                 "summary": "增加menu和角色关联关系",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "角色ID",
                         "name": "data",
                         "in": "body",
@@ -2622,6 +2797,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "删除菜单",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "菜单id",
                         "name": "data",
@@ -2673,6 +2854,12 @@ const docTemplate_swagger = `{
                 "summary": "根据id获取菜单",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "菜单id",
                         "name": "data",
                         "in": "body",
@@ -2723,6 +2910,12 @@ const docTemplate_swagger = `{
                 "summary": "获取用户动态路由",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "空",
                         "name": "data",
                         "in": "body",
@@ -2772,6 +2965,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "获取用户动态路由",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "空",
                         "name": "data",
@@ -2825,6 +3024,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "获取指定角色menu",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "角色ID",
                         "name": "data",
@@ -2880,6 +3085,12 @@ const docTemplate_swagger = `{
                 "summary": "分页获取基础menu列表",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "页码, 每页大小",
                         "name": "data",
                         "in": "body",
@@ -2933,6 +3144,12 @@ const docTemplate_swagger = `{
                 "summary": "更新菜单",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "路由path, 父菜单ID, 路由name, 对应前端文件路径, 排序标记",
                         "name": "data",
                         "in": "body",
@@ -2982,6 +3199,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "创建SysDictionary",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "SysDictionary模型",
                         "name": "data",
@@ -3033,6 +3256,12 @@ const docTemplate_swagger = `{
                 "summary": "删除SysDictionary",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "SysDictionary模型",
                         "name": "data",
                         "in": "body",
@@ -3082,6 +3311,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "用id查询SysDictionary",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "type": "string",
                         "description": "创建时间",
@@ -3169,6 +3404,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "分页获取SysDictionary列表",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "type": "string",
                         "description": "创建时间",
@@ -3268,6 +3509,12 @@ const docTemplate_swagger = `{
                 "summary": "更新SysDictionary",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "SysDictionary模型",
                         "name": "data",
                         "in": "body",
@@ -3317,6 +3564,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "创建SysDictionaryDetail",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "SysDictionaryDetail模型",
                         "name": "data",
@@ -3368,6 +3621,12 @@ const docTemplate_swagger = `{
                 "summary": "删除SysDictionaryDetail",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "SysDictionaryDetail模型",
                         "name": "data",
                         "in": "body",
@@ -3417,6 +3676,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "用id查询SysDictionaryDetail",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "type": "string",
                         "description": "创建时间",
@@ -3510,6 +3775,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "分页获取SysDictionaryDetail列表",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "type": "string",
                         "description": "创建时间",
@@ -3615,6 +3886,12 @@ const docTemplate_swagger = `{
                 "summary": "更新SysDictionaryDetail",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "更新SysDictionaryDetail",
                         "name": "data",
                         "in": "body",
@@ -3664,6 +3941,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "创建SysOperationRecord",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "创建SysOperationRecord",
                         "name": "data",
@@ -3715,6 +3998,12 @@ const docTemplate_swagger = `{
                 "summary": "删除SysOperationRecord",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "SysOperationRecord模型",
                         "name": "data",
                         "in": "body",
@@ -3765,6 +4054,12 @@ const docTemplate_swagger = `{
                 "summary": "批量删除SysOperationRecord",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "批量删除SysOperationRecord",
                         "name": "data",
                         "in": "body",
@@ -3814,6 +4109,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "用id查询SysOperationRecord",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "type": "string",
                         "description": "代理",
@@ -3937,6 +4238,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "分页获取SysOperationRecord列表",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "type": "string",
                         "description": "代理",
@@ -4067,6 +4374,14 @@ const docTemplate_swagger = `{
                     "System"
                 ],
                 "summary": "获取服务器信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "获取服务器信息",
@@ -4107,6 +4422,14 @@ const docTemplate_swagger = `{
                     "System"
                 ],
                 "summary": "获取配置文件内容",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "获取配置文件内容,返回包括系统配置",
@@ -4146,6 +4469,14 @@ const docTemplate_swagger = `{
                     "System"
                 ],
                 "summary": "重启系统",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "重启系统",
@@ -4183,6 +4514,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "设置配置文件内容",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "设置配置文件内容",
                         "name": "data",
@@ -4233,6 +4570,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "设置用户信息",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "ID, 用户名, 昵称, 头像链接",
                         "name": "data",
@@ -4285,6 +4628,12 @@ const docTemplate_swagger = `{
                 "summary": "用户修改密码",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "用户名, 原密码, 新密码",
                         "name": "data",
                         "in": "body",
@@ -4335,6 +4684,12 @@ const docTemplate_swagger = `{
                 "summary": "删除用户",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "用户ID",
                         "name": "data",
                         "in": "body",
@@ -4383,6 +4738,14 @@ const docTemplate_swagger = `{
                     "SysUser"
                 ],
                 "summary": "获取用户信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "获取用户信息",
@@ -4427,6 +4790,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "分页获取用户列表",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "页码, 每页大小",
                         "name": "data",
@@ -4523,6 +4892,12 @@ const docTemplate_swagger = `{
                 "summary": "用户修改密码",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "ID",
                         "name": "data",
                         "in": "body",
@@ -4572,6 +4947,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "设置用户权限",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "用户UUID, 角色ID",
                         "name": "data",
@@ -4623,6 +5004,12 @@ const docTemplate_swagger = `{
                 "summary": "更改用户权限",
                 "parameters": [
                     {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
+                    {
                         "description": "用户UUID, 角色ID",
                         "name": "data",
                         "in": "body",
@@ -4672,6 +5059,12 @@ const docTemplate_swagger = `{
                 ],
                 "summary": "设置用户信息",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "x-token",
+                        "in": "header"
+                    },
                     {
                         "description": "ID, 用户名, 昵称, 头像链接",
                         "name": "data",
@@ -4865,6 +5258,10 @@ const docTemplate_swagger = `{
                 "imgWidth": {
                     "description": "验证码宽度",
                     "type": "integer"
+                },
+                "is-return-captcha": {
+                    "description": "是否返回验证码",
+                    "type": "boolean"
                 },
                 "keyLong": {
                     "description": "验证码长度",
@@ -5946,6 +6343,9 @@ const docTemplate_swagger = `{
         "response.SysCaptchaResponse": {
             "type": "object",
             "properties": {
+                "captcha": {
+                    "type": "string"
+                },
                 "captchaId": {
                     "type": "string"
                 },

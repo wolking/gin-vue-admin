@@ -16,6 +16,7 @@ type AutoCodeHistoryApi struct{}
 // @Summary 获取meta信息
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.GetById true "请求参数"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "获取meta信息"
@@ -36,6 +37,7 @@ func (a *AutoCodeHistoryApi) First(c *gin.Context) {
 // @Summary 删除回滚记录
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.GetById true "请求参数"
 // @Success 200 {object} response.Response{msg=string} "删除回滚记录"
@@ -57,6 +59,7 @@ func (a *AutoCodeHistoryApi) Delete(c *gin.Context) {
 // @Summary 回滚自动生成代码
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.GetById true "请求参数"
 // @Success 200 {object} response.Response{msg=string} "回滚自动生成代码"
@@ -76,6 +79,7 @@ func (a *AutoCodeHistoryApi) RollBack(c *gin.Context) {
 // @Summary 查询回滚记录
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body systemReq.SysAutoHistory true "请求参数"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "查询回滚记录,返回包括列表,总数,页码,每页数量"

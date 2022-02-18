@@ -22,6 +22,7 @@ type AutoCodeApi struct{}
 // @Summary 预览创建后的代码
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.AutoCodeStruct true "预览创建代码"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "预览创建后的代码"
@@ -47,6 +48,7 @@ func (autoApi *AutoCodeApi) PreviewTemp(c *gin.Context) {
 // @Summary 自动代码模板
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.AutoCodeStruct true "创建自动代码"
 // @Success 200 {string} string "{"success":true,"data":{},"msg":"创建成功"}"
@@ -93,6 +95,7 @@ func (autoApi *AutoCodeApi) CreateTemp(c *gin.Context) {
 // @Summary 获取当前所有数据库
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "获取当前所有数据库"
 // @Router /autoCode/getDatabase [get]
@@ -110,6 +113,7 @@ func (autoApi *AutoCodeApi) GetDB(c *gin.Context) {
 // @Summary 获取当前数据库所有表
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "获取当前数据库所有表"
 // @Router /autoCode/getTables [get]
@@ -129,6 +133,7 @@ func (autoApi *AutoCodeApi) GetTables(c *gin.Context) {
 // @Summary 获取当前表所有字段
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "获取当前表所有字段"
 // @Router /autoCode/getColumn [get]

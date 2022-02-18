@@ -14,6 +14,7 @@ type JwtApi struct{}
 // @Summary jwt加入黑名单
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Success 200 {object} response.Response{msg=string} "jwt加入黑名单"
 // @Router /jwt/jsonInBlacklist [post]

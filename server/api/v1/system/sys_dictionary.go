@@ -16,6 +16,7 @@ type DictionaryApi struct{}
 // @Summary 创建SysDictionary
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysDictionary true "SysDictionary模型"
 // @Success 200 {object} response.Response{msg=string} "创建SysDictionary"
@@ -35,6 +36,7 @@ func (s *DictionaryApi) CreateSysDictionary(c *gin.Context) {
 // @Summary 删除SysDictionary
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysDictionary true "SysDictionary模型"
 // @Success 200 {object} response.Response{msg=string} "删除SysDictionary"
@@ -54,6 +56,7 @@ func (s *DictionaryApi) DeleteSysDictionary(c *gin.Context) {
 // @Summary 更新SysDictionary
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysDictionary true "SysDictionary模型"
 // @Success 200 {object} response.Response{msg=string} "更新SysDictionary"
@@ -73,6 +76,7 @@ func (s *DictionaryApi) UpdateSysDictionary(c *gin.Context) {
 // @Summary 用id查询SysDictionary
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data query system.SysDictionary true "ID或字典英名"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "用id查询SysDictionary"
@@ -92,6 +96,7 @@ func (s *DictionaryApi) FindSysDictionary(c *gin.Context) {
 // @Summary 分页获取SysDictionary列表
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data query request.SysDictionarySearch true "页码, 每页大小, 搜索条件"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "分页获取SysDictionary列表,返回包括列表,总数,页码,每页数量"

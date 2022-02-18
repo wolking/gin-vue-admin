@@ -16,6 +16,7 @@ type DictionaryDetailApi struct{}
 // @Summary 创建SysDictionaryDetail
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysDictionaryDetail true "SysDictionaryDetail模型"
 // @Success 200 {object} response.Response{msg=string} "创建SysDictionaryDetail"
@@ -35,6 +36,7 @@ func (s *DictionaryDetailApi) CreateSysDictionaryDetail(c *gin.Context) {
 // @Summary 删除SysDictionaryDetail
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysDictionaryDetail true "SysDictionaryDetail模型"
 // @Success 200 {object} response.Response{msg=string} "删除SysDictionaryDetail"
@@ -54,6 +56,7 @@ func (s *DictionaryDetailApi) DeleteSysDictionaryDetail(c *gin.Context) {
 // @Summary 更新SysDictionaryDetail
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysDictionaryDetail true "更新SysDictionaryDetail"
 // @Success 200 {object} response.Response{msg=string} "更新SysDictionaryDetail"
@@ -73,6 +76,7 @@ func (s *DictionaryDetailApi) UpdateSysDictionaryDetail(c *gin.Context) {
 // @Summary 用id查询SysDictionaryDetail
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data query system.SysDictionaryDetail true "用id查询SysDictionaryDetail"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "用id查询SysDictionaryDetail"
@@ -96,6 +100,7 @@ func (s *DictionaryDetailApi) FindSysDictionaryDetail(c *gin.Context) {
 // @Summary 分页获取SysDictionaryDetail列表
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data query request.SysDictionaryDetailSearch true "页码, 每页大小, 搜索条件"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "分页获取SysDictionaryDetail列表,返回包括列表,总数,页码,每页数量"

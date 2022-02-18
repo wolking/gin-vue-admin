@@ -19,6 +19,7 @@ type AuthorityMenuApi struct{}
 // @Summary 获取用户动态路由
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Param data body request.Empty true "空"
 // @Success 200 {object} response.Response{data=systemRes.SysMenusResponse,msg=string} "获取用户动态路由,返回包括系统菜单详情列表"
 // @Router /menu/getMenu [post]
@@ -38,6 +39,7 @@ func (a *AuthorityMenuApi) GetMenu(c *gin.Context) {
 // @Summary 获取用户动态路由
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Param data body request.Empty true "空"
 // @Success 200 {object} response.Response{data=systemRes.SysBaseMenusResponse,msg=string} "获取用户动态路由,返回包括系统菜单列表"
 // @Router /menu/getBaseMenuTree [post]
@@ -54,6 +56,7 @@ func (a *AuthorityMenuApi) GetBaseMenuTree(c *gin.Context) {
 // @Summary 增加menu和角色关联关系
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body systemReq.AddMenuAuthorityInfo true "角色ID"
 // @Success 200 {object} response.Response{msg=string} "增加menu和角色关联关系"
@@ -77,6 +80,7 @@ func (a *AuthorityMenuApi) AddMenuAuthority(c *gin.Context) {
 // @Summary 获取指定角色menu
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.GetAuthorityId true "角色ID"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "获取指定角色menu"
@@ -100,6 +104,7 @@ func (a *AuthorityMenuApi) GetMenuAuthority(c *gin.Context) {
 // @Summary 新增菜单
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysBaseMenu true "路由path, 父菜单ID, 路由name, 对应前端文件路径, 排序标记"
 // @Success 200 {object} response.Response{msg=string} "新增菜单"
@@ -128,6 +133,7 @@ func (a *AuthorityMenuApi) AddBaseMenu(c *gin.Context) {
 // @Summary 删除菜单
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.GetById true "菜单id"
 // @Success 200 {object} response.Response{msg=string} "删除菜单"
@@ -151,6 +157,7 @@ func (a *AuthorityMenuApi) DeleteBaseMenu(c *gin.Context) {
 // @Summary 更新菜单
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysBaseMenu true "路由path, 父菜单ID, 路由name, 对应前端文件路径, 排序标记"
 // @Success 200 {object} response.Response{msg=string} "更新菜单"
@@ -178,6 +185,7 @@ func (a *AuthorityMenuApi) UpdateBaseMenu(c *gin.Context) {
 // @Summary 根据id获取菜单
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.GetById true "菜单id"
 // @Success 200 {object} response.Response{data=systemRes.SysBaseMenuResponse,msg=string} "根据id获取菜单,返回包括系统菜单列表"
@@ -201,6 +209,7 @@ func (a *AuthorityMenuApi) GetBaseMenuById(c *gin.Context) {
 // @Summary 分页获取基础menu列表
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.PageInfo true "页码, 每页大小"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "分页获取基础menu列表,返回包括列表,总数,页码,每页数量"

@@ -17,6 +17,7 @@ type SystemApi struct{}
 // @Summary 获取配置文件内容
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Success 200 {object} response.Response{data=systemRes.SysConfigResponse,msg=string} "获取配置文件内容,返回包括系统配置"
 // @Router /system/getSystemConfig [post]
 func (s *SystemApi) GetSystemConfig(c *gin.Context) {
@@ -32,6 +33,7 @@ func (s *SystemApi) GetSystemConfig(c *gin.Context) {
 // @Summary 设置配置文件内容
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Param data body system.System true "设置配置文件内容"
 // @Success 200 {object} response.Response{data=string} "设置配置文件内容"
 // @Router /system/setSystemConfig [post]
@@ -50,6 +52,7 @@ func (s *SystemApi) SetSystemConfig(c *gin.Context) {
 // @Summary 重启系统
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Success 200 {object} response.Response{msg=string} "重启系统"
 // @Router /system/reloadSystem [post]
 func (s *SystemApi) ReloadSystem(c *gin.Context) {
@@ -66,6 +69,7 @@ func (s *SystemApi) ReloadSystem(c *gin.Context) {
 // @Summary 获取服务器信息
 // @Security ApiKeyAuth
 // @Produce  application/json
+// @Param x-token header string false "token"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "获取服务器信息"
 // @Router /system/getServerInfo [post]
 func (s *SystemApi) GetServerInfo(c *gin.Context) {

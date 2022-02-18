@@ -17,6 +17,7 @@ type OperationRecordApi struct{}
 // @Summary 创建SysOperationRecord
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysOperationRecord true "创建SysOperationRecord"
 // @Success 200 {object} response.Response{msg=string} "创建SysOperationRecord"
@@ -36,6 +37,7 @@ func (s *OperationRecordApi) CreateSysOperationRecord(c *gin.Context) {
 // @Summary 删除SysOperationRecord
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysOperationRecord true "SysOperationRecord模型"
 // @Success 200 {object} response.Response{msg=string} "删除SysOperationRecord"
@@ -55,6 +57,7 @@ func (s *OperationRecordApi) DeleteSysOperationRecord(c *gin.Context) {
 // @Summary 批量删除SysOperationRecord
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.IdsReq true "批量删除SysOperationRecord"
 // @Success 200 {object} response.Response{msg=string} "批量删除SysOperationRecord"
@@ -74,6 +77,7 @@ func (s *OperationRecordApi) DeleteSysOperationRecordByIds(c *gin.Context) {
 // @Summary 用id查询SysOperationRecord
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data query system.SysOperationRecord true "Id"
 // @Success 200 {object} response.Response{data=map[string]interface{},msg=string} "用id查询SysOperationRecord"
@@ -97,6 +101,7 @@ func (s *OperationRecordApi) FindSysOperationRecord(c *gin.Context) {
 // @Summary 分页获取SysOperationRecord列表
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data query request.SysOperationRecordSearch true "页码, 每页大小, 搜索条件"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "分页获取SysOperationRecord列表,返回包括列表,总数,页码,每页数量"

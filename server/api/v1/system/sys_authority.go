@@ -19,6 +19,7 @@ type AuthorityApi struct{}
 // @Summary 创建角色
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysAuthority true "权限id, 权限名, 父角色id"
 // @Success 200 {object} response.Response{data=systemRes.SysAuthorityResponse,msg=string} "创建角色,返回包括系统角色详情"
@@ -44,6 +45,7 @@ func (a *AuthorityApi) CreateAuthority(c *gin.Context) {
 // @Summary 拷贝角色
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body response.SysAuthorityCopyResponse true "旧角色id, 新权限id, 新权限名, 新父角色id"
 // @Success 200 {object} response.Response{data=systemRes.SysAuthorityResponse,msg=string} "拷贝角色,返回包括系统角色详情"
@@ -71,6 +73,7 @@ func (a *AuthorityApi) CopyAuthority(c *gin.Context) {
 // @Summary 删除角色
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysAuthority true "删除角色"
 // @Success 200 {object} response.Response{msg=string} "删除角色"
@@ -94,6 +97,7 @@ func (a *AuthorityApi) DeleteAuthority(c *gin.Context) {
 // @Summary 更新角色信息
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysAuthority true "权限id, 权限名, 父角色id"
 // @Success 200 {object} response.Response{data=systemRes.SysAuthorityResponse,msg=string} "更新角色信息,返回包括系统角色详情"
@@ -117,6 +121,7 @@ func (a *AuthorityApi) UpdateAuthority(c *gin.Context) {
 // @Summary 分页获取角色列表
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body request.PageInfo true "页码, 每页大小"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "分页获取角色列表,返回包括列表,总数,页码,每页数量"
@@ -145,6 +150,7 @@ func (a *AuthorityApi) GetAuthorityList(c *gin.Context) {
 // @Summary 设置角色资源权限
 // @Security ApiKeyAuth
 // @accept application/json
+// @Param x-token header string false "token"
 // @Produce application/json
 // @Param data body system.SysAuthority true "设置角色资源权限"
 // @Success 200 {object} response.Response{msg=string} "设置角色资源权限"
